@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DecorNow Global — HUB: AI-native customer conversations</title>
-<meta name="description" content="DecorNow Global builds HUB, an affordable AI-native SaaS that unifies customer conversations from Facebook, Zalo, Shopee and TikTok Shop for SMBs in Vietnam and Singapore.">
+<title>DecorNow Global — HUB: AI-native commerce for SMBs</title>
+<meta name="description" content="DecorNow Global builds HUB, an affordable AI-native SaaS that unifies chat, orders, shipping, marketplaces and marketing for SMBs in Vietnam and Singapore.">
 <meta property="og:title" content="DecorNow Global — HUB">
-<meta property="og:description" content="One AI-powered inbox for every sales channel. Built in Vietnam for SMBs.">
+<meta property="og:description" content="Sell on every channel, run it all from one AI-powered platform.">
 <meta property="og:url" content="https://decornowglobal.vn/">
+<meta property="og:image" content="https://decornowglobal.vn/img/hero.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='%23fbbf24' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,40 +23,34 @@
     --accent: #d97706;
     --accent-soft: #fef3c7;
     --dark: #111827;
+    --tint: #f3f1ea;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
+    margin: 0; background: var(--bg); color: var(--ink);
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
   /* Nav */
   header {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(250, 250, 247, .88);
-    backdrop-filter: blur(10px);
+    background: rgba(250, 250, 247, .9); backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; }
-  .mark {
-    width: 32px; height: 32px; border-radius: 8px; background: var(--dark); color: #fbbf24;
-    display: grid; place-items: center; font-weight: 800;
-  }
+  .mark { width: 32px; height: 32px; border-radius: 8px; background: var(--dark); color: #fbbf24; display: grid; place-items: center; font-weight: 800; }
   .nav nav { display: flex; gap: 28px; align-items: center; font-size: 15px; }
   .nav nav a { text-decoration: none; color: var(--muted); }
   .nav nav a:hover { color: var(--ink); }
   .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 15px;
-    text-decoration: none; border: 1px solid transparent; transition: transform .15s, background .15s;
+    display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px;
+    font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .15s;
   }
   .btn:hover { transform: translateY(-1px); }
   .btn-dark { background: var(--dark); color: #fff; }
@@ -63,70 +58,110 @@
   .nav .btn { padding: 8px 16px; font-size: 14px; color: #fff; }
 
   /* Hero */
-  .hero { padding: 96px 0 72px; }
-  .eyebrow {
-    display: inline-block; padding: 6px 12px; border-radius: 999px;
-    background: var(--accent-soft); color: #92400e; font-size: 13px; font-weight: 600;
-  }
-  h1 { font-size: clamp(36px, 5.5vw, 60px); line-height: 1.08; letter-spacing: -0.03em; margin: 20px 0 20px; max-width: 860px; }
+  .hero { padding: 72px 0 56px; display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
+  .eyebrow { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--accent-soft); color: #92400e; font-size: 13px; font-weight: 600; }
+  h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.08; letter-spacing: -0.03em; margin: 18px 0; }
   h1 em { font-style: normal; color: var(--accent); }
-  .lead { font-size: 19px; color: var(--muted); max-width: 680px; margin: 0 0 32px; }
+  .lead { font-size: 18px; color: var(--muted); margin: 0 0 28px; }
   .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-  .channels { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 40px; }
-  .chip {
-    padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
-    background: var(--surface); font-size: 14px; font-weight: 500;
-  }
+  .hero-img { border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -20px rgba(17,24,39,.35); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 40px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .stat b { display: block; font-size: 26px; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 13px; }
 
   /* Sections */
   section { padding: 72px 0; }
-  .section-head { max-width: 680px; margin-bottom: 40px; }
-  h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 12px; }
+  .alt { background: var(--tint); }
+  .section-head { max-width: 720px; margin-bottom: 44px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .kicker { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -0.02em; line-height: 1.15; margin: 8px 0 12px; }
   .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
 
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px;
-  }
-  .card .icon {
-    width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft);
-    display: grid; place-items: center; font-size: 20px; margin-bottom: 16px;
-  }
-  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  /* Problem */
+  .problem { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
+  .problem img { border-radius: 20px; }
+  .pains { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .pain { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .pain h3 { margin: 0 0 6px; font-size: 16px; }
+  .pain p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  /* Feature rows */
+  .row { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: center; padding: 40px 0; }
+  .row.flip > .copy { order: 2; }
+  .copy h3 { font-size: 28px; letter-spacing: -0.02em; line-height: 1.2; margin: 6px 0 12px; }
+  .copy p { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+  .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .ticks li { display: flex; gap: 10px; font-size: 15px; }
+  .ticks li::before { content: "✓"; color: var(--accent); font-weight: 800; }
+  .frame { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px -24px rgba(17,24,39,.3); }
+  .frame .bar { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--line); background: #f6f5f1; }
+  .frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #d6d3cb; }
+  .stack { display: grid; gap: 14px; }
+  .studio { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .studio figure { margin: 0; }
+  .studio figure.result { grid-row: span 2; }
+  .studio figcaption { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .studio img { border-radius: 12px; border: 1px solid var(--line); }
+  .note { font-size: 13px; color: var(--muted); text-align: center; margin-top: 16px; }
+
+  /* Capability cards */
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .card img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+  .card .body { padding: 20px 22px 24px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
   .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .flow { border-radius: 20px; overflow: hidden; margin-bottom: 28px; }
+  .steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; counter-reset: s; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; font-size: 14px; font-weight: 600; }
+  .step::before { counter-increment: s; content: counter(s); display: block; color: var(--accent); font-weight: 800; font-size: 13px; margin-bottom: 4px; }
 
   /* Claude band */
   .band { background: var(--dark); color: #f9fafb; border-radius: 24px; padding: 56px; }
   .band h2 { color: #fff; }
+  .band .section-head { margin-bottom: 24px; }
   .band .section-head p { color: #cbd5e1; }
-  .uses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 40px; margin: 0; padding: 0; list-style: none; }
-  .uses li { display: flex; gap: 12px; color: #e5e7eb; font-size: 16px; }
+  .uses { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 40px; margin: 0; padding: 0; list-style: none; }
+  .uses li { display: flex; gap: 12px; color: #e5e7eb; font-size: 15px; }
   .uses li::before { content: "→"; color: #fbbf24; font-weight: 700; }
+  .band img { border-radius: 16px; }
 
   /* Markets */
-  .markets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .market .tag { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
-  .market h3 { font-size: 24px; margin: 6px 0 8px; }
+  .markets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .market { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .market .tag { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+  .market h3 { font-size: 26px; margin: 6px 0 8px; }
+  .market p { margin: 0; color: var(--muted); }
 
   /* Company */
-  .company { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
-  dl { margin: 0; display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; font-size: 15px; }
+  .company { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+  .info { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+  dl { margin: 0; display: grid; grid-template-columns: 130px 1fr; gap: 12px 20px; font-size: 15px; }
   dt { color: var(--muted); }
   dd { margin: 0; font-weight: 500; }
 
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
   .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
-  @media (max-width: 860px) {
-    .grid, .markets, .company { grid-template-columns: 1fr; }
-    .uses { grid-template-columns: 1fr; }
+  @media (max-width: 960px) {
+    .hero, .problem, .row, .company, .uses { grid-template-columns: 1fr; gap: 28px; }
+    .uses { gap: 12px; }
+    .row.flip > .copy { order: 0; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: repeat(3, 1fr); }
     .band { padding: 36px 24px; }
     .nav nav a:not(.btn) { display: none; }
-    .hero { padding: 64px 0 48px; }
-    section { padding: 48px 0; }
   }
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .wrap { padding: 0 16px; }
+    .hero { padding: 40px 0 32px; }
+    section { padding: 48px 0; }
+    .cards, .markets, .pains { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
     dl { grid-template-columns: 1fr; gap: 2px; }
     dd { margin-bottom: 10px; }
   }
@@ -139,6 +174,7 @@
     <a class="brand" href="#top"><span class="mark">H</span> DecorNow Global</a>
     <nav>
       <a href="#product">Product</a>
+      <a href="#platform">Platform</a>
       <a href="#ai">AI</a>
       <a href="#company">Company</a>
       <a class="btn btn-dark" href="https://hub.decornow.vn" target="_blank" rel="noopener">Open HUB</a>
@@ -148,63 +184,203 @@
 
 <main id="top">
   <div class="wrap hero">
-    <span class="eyebrow">AI-native SaaS · Built in Vietnam</span>
-    <h1>Every customer conversation, <em>one AI-powered inbox.</em></h1>
-    <p class="lead">
-      HUB brings chats from Facebook, Zalo, Shopee and TikTok Shop into a single workspace,
-      connected to orders, CRM and ad performance — so small and medium businesses can sell faster
-      with an AI copilot at an affordable price.
-    </p>
-    <div class="cta">
-      <a class="btn btn-dark" href="mailto:phong@decornowglobal.vn?subject=HUB%20demo%20request">Request a demo</a>
-      <a class="btn btn-ghost" href="https://hub.decornow.vn" target="_blank" rel="noopener">See HUB live ↗</a>
+    <div>
+      <span class="eyebrow">AI-native SaaS · Built in Vietnam</span>
+      <h1>Sell on every channel. <em>Run it all from one platform.</em></h1>
+      <p class="lead">
+        HUB unifies customer chats from Facebook, Zalo, Shopee and TikTok Shop with orders, shipping,
+        marketplaces, CRM and marketing — and puts an AI copilot next to every salesperson,
+        at a price small and medium businesses can afford.
+      </p>
+      <div class="cta">
+        <a class="btn btn-dark" href="mailto:phong@decornowglobal.vn?subject=HUB%20demo%20request">Request a demo</a>
+        <a class="btn btn-ghost" href="https://hub.decornow.vn" target="_blank" rel="noopener">See HUB live ↗</a>
+      </div>
     </div>
-    <div class="channels" aria-label="Supported channels">
-      <span class="chip">Facebook Messenger</span>
-      <span class="chip">Zalo</span>
-      <span class="chip">Zalo OA</span>
-      <span class="chip">Shopee</span>
-      <span class="chip">TikTok Shop</span>
+    <div class="hero-img">
+      <img src="img/hero.webp" width="1600" height="900" alt="HUB dashboard on a laptop surrounded by chat, order and customer icons">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>7+</b><span>chat &amp; marketplace channels</span></div>
+      <div class="stat"><b>12</b><span>product modules</span></div>
+      <div class="stat"><b>80+</b><span>screens in one account</span></div>
+      <div class="stat"><b>1</b><span>shared data model, many businesses</span></div>
     </div>
   </div>
 
-  <section id="product">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>From first message to delivered order</h2>
-        <p>HUB is already running in production for DecorNow's own sales and customer-service team, handling real conversations and orders every day.</p>
+  <section>
+    <div class="wrap problem">
+      <img src="img/problem.webp" width="936" height="941" alt="A sales agent juggling messages from many apps" loading="lazy">
+      <div>
+        <div class="kicker">The problem</div>
+        <h2>More channels, more manual work</h2>
+        <p style="color:var(--muted);font-size:17px;margin:0">Vietnamese SMBs sell mostly through chat. Every new channel adds another app to watch, another spreadsheet to copy orders into and another place where customers slip through the cracks.</p>
+        <div class="pains">
+          <div class="pain"><h3>Scattered conversations</h3><p>Facebook, Zalo, Shopee and TikTok each live in a separate app with no shared history.</p></div>
+          <div class="pain"><h3>Orders typed twice</h3><p>Sales staff re-enter names, addresses and products into order and shipping tools by hand.</p></div>
+          <div class="pain"><h3>Ads without proof</h3><p>Owners cannot tell which ad produced a message, an order or real revenue.</p></div>
+          <div class="pain"><h3>Knowledge walks out</h3><p>Pricing, policies and selling skills leave with the employee who knew them.</p></div>
+        </div>
       </div>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">💬</div>
-          <h3>Unified multi-channel inbox</h3>
-          <p>Many Facebook pages, Zalo accounts and marketplace shops in one place, routed to the right salesperson.</p>
+    </div>
+  </section>
+
+  <section id="product" class="alt">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="kicker">Product tour</div>
+        <h2>From the first message to money in the bank</h2>
+        <p>HUB already runs in production for DecorNow's own sales and customer-service team, handling real conversations and orders every day.</p>
+      </div>
+
+      <div class="row">
+        <div class="copy">
+          <div class="kicker">Unified inbox</div>
+          <h3>One screen for every conversation</h3>
+          <p>Many Facebook pages, multiple personal Zalo accounts, Zalo OA, TikTok, Shopee, Lazada and web chat — routed to the right salesperson, with the customer's full profile beside the chat.</p>
+          <ul class="ticks">
+            <li>Priority, SLA and lead temperature on every thread</li>
+            <li>Customer profile, CRM stage and ad source in the side panel</li>
+            <li>Quick replies, media library and safe sending limits</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="icon">✨</div>
-          <h3>AI copilot</h3>
-          <p>Suggests and, when trusted, sends replies automatically; detects intent and flags frustrated customers.</p>
+        <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+          <img src="img/shot-inbox.webp" width="1600" height="1097" alt="HUB unified inbox with conversations from TikTok, Zalo and Facebook" loading="lazy">
         </div>
-        <div class="card">
-          <div class="icon">🧾</div>
-          <h3>Orders inside the chat</h3>
-          <p>Create orders, send payment QR codes and book shipping without leaving the conversation.</p>
+      </div>
+
+      <div class="row flip">
+        <div class="copy">
+          <div class="kicker">AI for comments</div>
+          <h3>Turn ad comments into conversations</h3>
+          <p>AI reads every comment on Facebook posts and ads, understands the intent — price question, complaint, product question — and drafts both a public reply and a private message for staff to approve.</p>
+          <ul class="ticks">
+            <li>Intent detection with confidence score</li>
+            <li>Escalates angry or sensitive comments to a human</li>
+            <li>Approve and send in one click</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>Ad attribution &amp; ROAS</h3>
-          <p>Links every conversation back to the ad that started it and measures return on ad spend per campaign.</p>
+        <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+          <img src="img/shot-comments.webp" width="1600" height="1098" alt="AI triage of Facebook comments with suggested public and private replies" loading="lazy">
         </div>
-        <div class="card">
-          <div class="icon">✅</div>
-          <h3>Conversation QA &amp; lead scoring</h3>
-          <p>Scores sales conversations and lead intent so managers know where to coach and who to follow up.</p>
+      </div>
+
+      <div class="row">
+        <div class="copy">
+          <div class="kicker">AI Studio</div>
+          <h3>Customers see the product in their own home</h3>
+          <p>A customer sends a photo of their living room; HUB places the chosen artwork on their actual wall and sends the result back inside the same conversation — closing the sale faster.</p>
+          <ul class="ticks">
+            <li>Works from the customer's own photo</li>
+            <li>Uses the shop's real product catalogue</li>
+            <li>Delivered without leaving the chat</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="icon">🏢</div>
-          <h3>Multi-tenant from day one</h3>
-          <p>Each business gets its own isolated workspace, roles and settings — designed as SaaS, not a one-off tool.</p>
+        <div class="studio">
+          <figure><img src="img/studio-room.webp" width="1448" height="973" alt="Customer's living room photo" loading="lazy"><figcaption>1 · Customer's photo</figcaption></figure>
+          <figure class="result"><img src="img/studio-result.webp" width="720" height="825" alt="AI Studio result with artwork placed on the wall" loading="lazy"><figcaption>3 · Result sent in chat</figcaption></figure>
+          <figure><img src="img/studio-art.webp" width="1448" height="779" alt="Selected artwork from the catalogue" loading="lazy"><figcaption>2 · Chosen artwork</figcaption></figure>
         </div>
+      </div>
+
+      <div class="row flip">
+        <div class="copy">
+          <div class="kicker">Orders &amp; shipping</div>
+          <h3>The full order lifecycle on one board</h3>
+          <p>Create orders straight from the chat, book shipping with integrated carriers, track delivery and cash-on-delivery, and match incoming bank transfers to orders automatically.</p>
+          <ul class="ticks">
+            <li>Bulk actions and saved views for large order volumes</li>
+            <li>Integrated carriers with status and COD tracking</li>
+            <li>Automatic bank-transfer reconciliation and e-invoices</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="img/shot-orders.webp" width="1600" height="438" alt="HUB order board with statuses" loading="lazy">
+          </div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="img/shot-shipping.webp" width="1600" height="349" alt="HUB shipping list with carriers and delivery status" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="copy">
+          <div class="kicker">Products &amp; inventory</div>
+          <h3>Accurate stock, products and warranty</h3>
+          <p>Products, variants, stock in and out, slow-moving item alerts and warranty tickets that are tracked until the item is returned to the customer.</p>
+          <ul class="ticks">
+            <li>Product catalogue synced to Facebook for ads</li>
+            <li>Import and export with Excel</li>
+            <li>Warranty cases with intake rules and status</li>
+          </ul>
+        </div>
+        <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+          <img src="img/shot-products.webp" width="1600" height="906" alt="HUB product list with stock levels" loading="lazy">
+        </div>
+      </div>
+
+      <div class="row flip">
+        <div class="copy">
+          <div class="kicker">Automation &amp; broadcast</div>
+          <h3>Follow-ups that run without people</h3>
+          <p>If-then rules, a drag-and-drop automation studio with dry-run testing, follow-up sequences, after-hours bots and compliant bulk messaging across Facebook, Zalo and TikTok.</p>
+          <ul class="ticks">
+            <li>Dry-run every flow before turning it on</li>
+            <li>Respects each platform's messaging rules and consent</li>
+            <li>Approved message templates</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="img/shot-automation.webp" width="1416" height="383" alt="HUB Automation Studio" loading="lazy">
+          </div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="img/shot-broadcast.webp" width="1600" height="694" alt="HUB broadcast channels and campaigns" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <p class="note">Screens from HUB, shown with demo data.</p>
+    </div>
+  </section>
+
+  <section id="platform">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="kicker">One platform</div>
+        <h2>Everything a chat-first business needs</h2>
+        <p>Twelve modules that share one customer, one order and one set of numbers — so nothing is typed twice.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><img src="img/ai-copilot.webp" width="1600" height="894" alt="" loading="lazy"><div class="body"><h3>AI copilot for sales</h3><p>Suggests replies, scores conversation quality and flags frustrated customers in real time.</p></div></div>
+        <div class="card"><img src="img/ai-auto.webp" width="1157" height="940" alt="" loading="lazy"><div class="body"><h3>Self-taught AI auto-reply</h3><p>Turned on per channel, learns the shop's prices and tone, with safety rails and a cost cap.</p></div></div>
+        <div class="card"><img src="img/wiki.webp" width="1600" height="877" alt="" loading="lazy"><div class="body"><h3>Knowledge wiki</h3><p>Upload documents, approve pages, and let AI find the gaps from customers' real questions.</p></div></div>
+        <div class="card"><img src="img/marketplace-art.webp" width="1600" height="879" alt="" loading="lazy"><div class="body"><h3>Marketplaces &amp; true P&amp;L</h3><p>Shopee, TikTok Shop and Lazada orders, stock, fees, returns and profit per SKU in one place.</p></div></div>
+        <div class="card"><img src="img/capi-art.webp" width="1157" height="940" alt="" loading="lazy"><div class="body"><h3>Marketing measured in orders</h3><p>Know which ad produced a message, an order and revenue; send conversions back to Meta.</p></div></div>
+        <div class="card"><img src="img/crm-art.webp" width="1600" height="713" alt="" loading="lazy"><div class="body"><h3>Dealer CRM &amp; 360° customers</h3><p>Daily call lists, leads, tickets and funnels for B2B dealers; purchase history for every buyer.</p></div></div>
+        <div class="card"><img src="img/reports-art.webp" width="1600" height="610" alt="" loading="lazy"><div class="body"><h3>Owner reports</h3><p>The whole company on one screen — and every number drills down to the individual order.</p></div></div>
+        <div class="card"><img src="img/multitenant.webp" width="1600" height="879" alt="" loading="lazy"><div class="body"><h3>Built for many businesses</h3><p>Each company gets an isolated, configurable workspace with its own roles and modules.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="kicker">One seamless flow</div>
+        <h2>One order, no re-typing</h2>
+      </div>
+      <div class="flow"><img src="img/flow.webp" width="1600" height="439" alt="Order flow from chat to delivery and payment" loading="lazy"></div>
+      <div class="steps">
+        <div class="step">Ad or post</div>
+        <div class="step">Chat with AI help</div>
+        <div class="step">Order created</div>
+        <div class="step">Shipped</div>
+        <div class="step">Paid &amp; reconciled</div>
+        <div class="step">Reported to the owner</div>
       </div>
     </div>
   </section>
@@ -212,18 +388,21 @@
   <section id="ai">
     <div class="wrap">
       <div class="band">
-        <div class="section-head">
-          <h2>Built with Claude</h2>
-          <p>We use Anthropic's Claude models to bring enterprise-grade AI customer service to businesses that could never afford it before.</p>
+        <div>
+          <div class="section-head">
+            <div class="kicker" style="color:#fbbf24">AI inside</div>
+            <h2>Built with Claude</h2>
+            <p>We use Anthropic's Claude models to bring enterprise-grade AI customer service to businesses that could never afford it before.</p>
+          </div>
+          <ul class="uses">
+            <li>Draft and auto-send customer replies in Vietnamese and English</li>
+            <li>Extract names, phone numbers, addresses and products from chats into orders</li>
+            <li>Score conversation quality and lead intent</li>
+            <li>Summarize long chat histories for the next salesperson</li>
+            <li>Analyze sales and advertising data and recommend actions</li>
+            <li>Write product descriptions and marketing copy</li>
+          </ul>
         </div>
-        <ul class="uses">
-          <li>Draft and auto-send customer replies in Vietnamese and English</li>
-          <li>Extract names, phone numbers, addresses and products from chats into orders</li>
-          <li>Score conversation quality and lead intent</li>
-          <li>Summarize long chat histories for the next salesperson</li>
-          <li>Analyze sales and advertising data and recommend actions</li>
-          <li>Write product descriptions and marketing copy</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -231,31 +410,28 @@
   <section>
     <div class="wrap">
       <div class="section-head">
+        <div class="kicker">Markets</div>
         <h2>Where we're going</h2>
         <p>Affordable AI for the businesses that sell through chat — starting at home.</p>
       </div>
       <div class="markets">
-        <div class="card market">
-          <div class="tag">Now</div>
-          <h3>Vietnam</h3>
-          <p>SMBs selling through Facebook, Zalo and marketplaces, where chat is the main sales channel.</p>
-        </div>
-        <div class="card market">
-          <div class="tag">Next</div>
-          <h3>Singapore</h3>
-          <p>Our first market outside Vietnam, with English-language support, as a base for Southeast Asia.</p>
-        </div>
+        <div class="market"><div class="tag">Now</div><h3>Vietnam</h3><p>SMBs selling through Facebook, Zalo and marketplaces, where chat is the main sales channel.</p></div>
+        <div class="market"><div class="tag">Next</div><h3>Singapore</h3><p>Our first market outside Vietnam, with English-language support, as a base for Southeast Asia.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="company">
+  <section id="company" class="alt">
     <div class="wrap company">
       <div class="section-head">
+        <div class="kicker">Company</div>
         <h2>About DecorNow Global</h2>
-        <p>DecorNow Global is a Vietnamese technology startup founded in February 2026. We build HUB, an AI-native SaaS that lets small and medium businesses run sales and customer service across every chat channel with the help of AI.</p>
+        <p>DecorNow Global is a Vietnamese technology startup founded in February 2026. We build HUB, an AI-native SaaS that lets small and medium businesses run sales, operations and customer service across every chat channel with the help of AI.</p>
+        <div class="cta" style="margin-top:24px">
+          <a class="btn btn-dark" href="mailto:phong@decornowglobal.vn?subject=HUB%20demo%20request">Contact us</a>
+        </div>
       </div>
-      <div class="card">
+      <div class="info">
         <dl>
           <dt>Legal name</dt><dd>DecorNow Global Company Limited<br><span style="color:var(--muted);font-weight:400">Công ty TNHH DecorNow Global</span></dd>
           <dt>Founded</dt><dd>February 2026</dd>
