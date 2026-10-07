@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DecorNow Global — HUB: AI-native customer conversations</title>
+<meta name="description" content="DecorNow Global builds HUB, an affordable AI-native SaaS that unifies customer conversations from Facebook, Zalo, Shopee and TikTok Shop for SMBs in Vietnam and Singapore.">
+<meta property="og:title" content="DecorNow Global — HUB">
+<meta property="og:description" content="One AI-powered inbox for every sales channel. Built in Vietnam for SMBs.">
+<meta property="og:url" content="https://decornowglobal.vn/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='%23fbbf24' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #111827;
+    --muted: #5b6474;
+    --line: #e7e5df;
+    --accent: #d97706;
+    --accent-soft: #fef3c7;
+    --dark: #111827;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250, 250, 247, .88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; }
+  .mark {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--dark); color: #fbbf24;
+    display: grid; place-items: center; font-weight: 800;
+  }
+  .nav nav { display: flex; gap: 28px; align-items: center; font-size: 15px; }
+  .nav nav a { text-decoration: none; color: var(--muted); }
+  .nav nav a:hover { color: var(--ink); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 15px;
+    text-decoration: none; border: 1px solid transparent; transition: transform .15s, background .15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-dark { background: var(--dark); color: #fff; }
+  .btn-ghost { background: var(--surface); border-color: var(--line); }
+  .nav .btn { padding: 8px 16px; font-size: 14px; color: #fff; }
+
+  /* Hero */
+  .hero { padding: 96px 0 72px; }
+  .eyebrow {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    background: var(--accent-soft); color: #92400e; font-size: 13px; font-weight: 600;
+  }
+  h1 { font-size: clamp(36px, 5.5vw, 60px); line-height: 1.08; letter-spacing: -0.03em; margin: 20px 0 20px; max-width: 860px; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { font-size: 19px; color: var(--muted); max-width: 680px; margin: 0 0 32px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .channels { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 40px; }
+  .chip {
+    padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); font-size: 14px; font-weight: 500;
+  }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-head { max-width: 680px; margin-bottom: 40px; }
+  h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 12px; }
+  .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px;
+  }
+  .card .icon {
+    width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft);
+    display: grid; place-items: center; font-size: 20px; margin-bottom: 16px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* Claude band */
+  .band { background: var(--dark); color: #f9fafb; border-radius: 24px; padding: 56px; }
+  .band h2 { color: #fff; }
+  .band .section-head p { color: #cbd5e1; }
+  .uses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 40px; margin: 0; padding: 0; list-style: none; }
+  .uses li { display: flex; gap: 12px; color: #e5e7eb; font-size: 16px; }
+  .uses li::before { content: "→"; color: #fbbf24; font-weight: 700; }
+
+  /* Markets */
+  .markets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .market .tag { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+  .market h3 { font-size: 24px; margin: 6px 0 8px; }
+
+  /* Company */
+  .company { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  dl { margin: 0; display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; font-size: 15px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-weight: 500; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+  .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 860px) {
+    .grid, .markets, .company { grid-template-columns: 1fr; }
+    .uses { grid-template-columns: 1fr; }
+    .band { padding: 36px 24px; }
+    .nav nav a:not(.btn) { display: none; }
+    .hero { padding: 64px 0 48px; }
+    section { padding: 48px 0; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark">H</span> DecorNow Global</a>
+    <nav>
+      <a href="#product">Product</a>
+      <a href="#ai">AI</a>
+      <a href="#company">Company</a>
+      <a class="btn btn-dark" href="https://hub.decornow.vn" target="_blank" rel="noopener">Open HUB</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <span class="eyebrow">AI-native SaaS · Built in Vietnam</span>
+    <h1>Every customer conversation, <em>one AI-powered inbox.</em></h1>
+    <p class="lead">
+      HUB brings chats from Facebook, Zalo, Shopee and TikTok Shop into a single workspace,
+      connected to orders, CRM and ad performance — so small and medium businesses can sell faster
+      with an AI copilot at an affordable price.
+    </p>
+    <div class="cta">
+      <a class="btn btn-dark" href="mailto:phong@decornowglobal.vn?subject=HUB%20demo%20request">Request a demo</a>
+      <a class="btn btn-ghost" href="https://hub.decornow.vn" target="_blank" rel="noopener">See HUB live ↗</a>
+    </div>
+    <div class="channels" aria-label="Supported channels">
+      <span class="chip">Facebook Messenger</span>
+      <span class="chip">Zalo</span>
+      <span class="chip">Zalo OA</span>
+      <span class="chip">Shopee</span>
+      <span class="chip">TikTok Shop</span>
+    </div>
+  </div>
+
+  <section id="product">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From first message to delivered order</h2>
+        <p>HUB is already running in production for DecorNow's own sales and customer-service team, handling real conversations and orders every day.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>Unified multi-channel inbox</h3>
+          <p>Many Facebook pages, Zalo accounts and marketplace shops in one place, routed to the right salesperson.</p>
+        </div>
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>AI copilot</h3>
+          <p>Suggests and, when trusted, sends replies automatically; detects intent and flags frustrated customers.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧾</div>
+          <h3>Orders inside the chat</h3>
+          <p>Create orders, send payment QR codes and book shipping without leaving the conversation.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Ad attribution &amp; ROAS</h3>
+          <p>Links every conversation back to the ad that started it and measures return on ad spend per campaign.</p>
+        </div>
+        <div class="card">
+          <div class="icon">✅</div>
+          <h3>Conversation QA &amp; lead scoring</h3>
+          <p>Scores sales conversations and lead intent so managers know where to coach and who to follow up.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏢</div>
+          <h3>Multi-tenant from day one</h3>
+          <p>Each business gets its own isolated workspace, roles and settings — designed as SaaS, not a one-off tool.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="band">
+        <div class="section-head">
+          <h2>Built with Claude</h2>
+          <p>We use Anthropic's Claude models to bring enterprise-grade AI customer service to businesses that could never afford it before.</p>
+        </div>
+        <ul class="uses">
+          <li>Draft and auto-send customer replies in Vietnamese and English</li>
+          <li>Extract names, phone numbers, addresses and products from chats into orders</li>
+          <li>Score conversation quality and lead intent</li>
+          <li>Summarize long chat histories for the next salesperson</li>
+          <li>Analyze sales and advertising data and recommend actions</li>
+          <li>Write product descriptions and marketing copy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where we're going</h2>
+        <p>Affordable AI for the businesses that sell through chat — starting at home.</p>
+      </div>
+      <div class="markets">
+        <div class="card market">
+          <div class="tag">Now</div>
+          <h3>Vietnam</h3>
+          <p>SMBs selling through Facebook, Zalo and marketplaces, where chat is the main sales channel.</p>
+        </div>
+        <div class="card market">
+          <div class="tag">Next</div>
+          <h3>Singapore</h3>
+          <p>Our first market outside Vietnam, with English-language support, as a base for Southeast Asia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap company">
+      <div class="section-head">
+        <h2>About DecorNow Global</h2>
+        <p>DecorNow Global is a Vietnamese technology startup founded in February 2026. We build HUB, an AI-native SaaS that lets small and medium businesses run sales and customer service across every chat channel with the help of AI.</p>
+      </div>
+      <div class="card">
+        <dl>
+          <dt>Legal name</dt><dd>DecorNow Global Company Limited<br><span style="color:var(--muted);font-weight:400">Công ty TNHH DecorNow Global</span></dd>
+          <dt>Founded</dt><dd>February 2026</dd>
+          <dt>Tax ID</dt><dd>1102148670</dd>
+          <dt>Address</dt><dd>Hamlet 6, An Thanh, Ben Luc Commune, Tay Ninh Province, Vietnam</dd>
+          <dt>Contact</dt><dd><a href="mailto:phong@decornowglobal.vn">phong@decornowglobal.vn</a></dd>
+          <dt>Product</dt><dd><a href="https://hub.decornow.vn" target="_blank" rel="noopener">hub.decornow.vn</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 DecorNow Global Company Limited</span>
+    <span>Ben Luc, Tay Ninh, Vietnam · <a href="mailto:phong@decornowglobal.vn">phong@decornowglobal.vn</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
